@@ -34,3 +34,21 @@ button {
     background-color: rgb(179, 167, 167);
     margin-top: 0.4rem;
 }
+
+#result{
+    margin-bottom: 1rem;
+    border: 2px solid wheat;
+    padding: 0.5rem;
+}
+ 
+.weatherDiv{
+    border: 3px solid green;
+    width: fit-content;
+    padding:0.2rem;
+}
+
+.article_result{
+    display: flex;
+    border: 3px dashed white;
+    padding: 1.5rem;
+}

@@ -12,10 +12,11 @@ window.getWeather = function () {
             // handle success
             console.log(response.data);
             document.getElementById("result").innerHTML = "weather data successfully recieved"
+            document.getElementById("temperature").innerHTML = `Temperature in ${response.data.name} '${response.data.sys.country}' is: ${response.data.main.temp}°C`
         })
         .catch(function (error) {
             // handle error
             console.log(error.data);
-            document.getElementById("result").innerHTML = "Error in getting data"
+            document.getElementById("result").innerHTML = "Error in fetching data"
         })
 }
