@@ -18,8 +18,10 @@ window.getWeather = function () {
             document.getElementById("wind").innerHTML = `Wind speed: <br> ${((response.data.wind.speed)*3.6).toFixed()} Km/h`
             document.getElementById("visibility").innerHTML = `Visibility: <br> ${(response.data.visibility)*0.001} Km`
             document.getElementById("description").innerHTML = `Sky is: <br> ${response.data.weather['0'].description}`
-            document.getElementById("icon").innerHTML = ``
+            document.getElementById("icon").innerHTML = `<img src"https://openweathermap.org/img/wn/${response.data.weather['0'].icon}@2x.png">`
+        
         })
+        
         .catch(function (error) {
             // handle error
             console.log(error.data);
