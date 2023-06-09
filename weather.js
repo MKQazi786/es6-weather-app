@@ -12,13 +12,13 @@ window.getWeather = function () {
             // handle success
             console.log(response.data);
             document.getElementById("result").innerHTML = "weather data successfully recieved"
-            document.getElementById("temperature").innerHTML = `Temperature Of <br> ${response.data.name} '${response.data.sys.country}' <br> Is: <br> ${response.data.main.temp}°C`
-            document.getElementById("feelsLike").innerHTML = `Feels like: ${response.data.main.feels_like}°C`
+            document.getElementById("temperature").innerHTML = `Temperature Of <br> ${response.data.name} (${response.data.sys.country}) <br> Is: <br> ${response.data.main.temp}°C`
+            document.getElementById("feelsLike").innerHTML = `Feels like: <br> ${response.data.main.feels_like}°C`
             document.getElementById("humidity").innerHTML = `Humidity: <br> ${response.data.main.humidity} g.m-3`
             document.getElementById("wind").innerHTML = `Wind speed: <br> ${((response.data.wind.speed)*3.6).toFixed()} Km/h`
             document.getElementById("visibility").innerHTML = `Visibility: <br> ${(response.data.visibility)*0.001} Km`
-            document.getElementById("description").innerHTML = `Sky is: <br> ${response.data.weather['0'].description}`
-            document.getElementById("icon").innerHTML = `<img src"https://openweathermap.org/img/wn/${response.data.weather['0'].icon}@2x.png">`
+            document.getElementById("description").innerHTML = `${response.data.weather['0'].description}`
+            document.getElementById("icon").innerHTML = `<img src="https://openweathermap.org/img/wn/${response.data.weather['0'].icon}@2x.png">`
         
         })
         
